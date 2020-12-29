@@ -10,7 +10,7 @@ def create(key,value,timeout=0):
         print("error: this key already exists")
     else:
         if(key.isalpha()):
-            if len(d)<(1024*1020*1024) and value<=(16*1024*1024): #constraints for file size less than 1GB and Jasonobject value less than 16KB 
+            if len(d)<(1024*1020*1024) and value<=(16*1024*1024):
                 if timeout==0:
                     l=[value,timeout]
                 else:
@@ -20,7 +20,7 @@ def create(key,value,timeout=0):
             else:
                 print("error: Memory limit exceeded!! ")
         else:
-            print("error: Invalind key_name!! key_name must contain only alphabets and no special characters or numbers")#error message3
+            print("error: Invalind key_name!! key_name must contain only alphabets and no special characters or numbers")
             
 def read(key):
     if key not in d:
